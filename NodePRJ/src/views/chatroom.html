@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>화상채팅</title>
+
+
+
+    <!-- Favicons -->
+    <link type="text/css" href="../public/assets/img/favicon.png" rel="icon">
+    <link type="text/css" href="../public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link type="text/css"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link type="text/css" href="../public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="../public/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link type="text/css" href="../public/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link type="text/css" href="../public/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link type="text/css" href="../public/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link type="text/css" href="../public/assets/css/style.css" rel="stylesheet">
+    <script src="../public/assets/js/webgazer.js"></script>
+    <script>
+
+        webgazer.setGazeListener(function (data, elapsedTime) {
+            if (data == null) {
+                return;
+            }
+            var xprediction = parseInt(data.x); //these x coordinates are relative to the viewport
+            var yprediction = parseInt(data.y); //these y coordinates are relative to the viewport
+            var blink = String(data.eyeFeatures.left.blink);
+
+            console.log(blink);
+
+            const box01 = document.getElementById("box01");
+            let box01_top = parseInt(box01.getBoundingClientRect().top);
+            let box01_bottom = parseInt(box01.getBoundingClientRect().bottom);
+            let box01_left = parseInt(box01.getBoundingClientRect().left);
+            let box01_right = parseInt(box01.getBoundingClientRect().right);
+
+            const box02 = document.getElementById("box02");
+            let box02_top = parseInt(box02.getBoundingClientRect().top);
+            let box02_bottom = parseInt(box02.getBoundingClientRect().bottom);
+            let box02_left = parseInt(box02.getBoundingClientRect().left);
+            let box02_right = parseInt(box02.getBoundingClientRect().right);
+
+            const box03 = document.getElementById("box03");
+            let box03_top = parseInt(box03.getBoundingClientRect().top);
+            let box03_bottom = parseInt(box03.getBoundingClientRect().bottom);
+            let box03_left = parseInt(box03.getBoundingClientRect().left);
+            let box03_right = parseInt(box03.getBoundingClientRect().right);
+
+            const box04 = document.getElementById("box04");
+            let box04_top = parseInt(box04.getBoundingClientRect().top);
+            let box04_bottom = parseInt(box04.getBoundingClientRect().bottom);
+            let box04_left = parseInt(box04.getBoundingClientRect().left);
+            let box04_right = parseInt(box04.getBoundingClientRect().right);
+
+            const box05 = document.getElementById("box05");
+            let box05_top = parseInt(box05.getBoundingClientRect().top);
+            let box05_bottom = parseInt(box05.getBoundingClientRect().bottom);
+            let box05_left = parseInt(box05.getBoundingClientRect().left);
+            let box05_right = parseInt(box05.getBoundingClientRect().right);
+
+            const box06 = document.getElementById("box06");
+            let box06_top = parseInt(box06.getBoundingClientRect().top);
+            let box06_bottom = parseInt(box06.getBoundingClientRect().bottom);
+            let box06_left = parseInt(box06.getBoundingClientRect().left);
+            let box06_right = parseInt(box06.getBoundingClientRect().right);
+
+            const box07 = document.getElementById("box07");
+            let box07_top = parseInt(box07.getBoundingClientRect().top);
+            let box07_bottom = parseInt(box07.getBoundingClientRect().bottom);
+            let box07_left = parseInt(box07.getBoundingClientRect().left);
+            let box07_right = parseInt(box07.getBoundingClientRect().right);
+
+            const box08 = document.getElementById("box08");
+            let box08_top = parseInt(box08.getBoundingClientRect().top);
+            let box08_bottom = parseInt(box08.getBoundingClientRect().bottom);
+            let box08_left = parseInt(box08.getBoundingClientRect().left);
+            let box08_right = parseInt(box08.getBoundingClientRect().right);
+
+            if (box01_left <= xprediction && xprediction <= box01_right && box01_top <= yprediction && yprediction <= box01_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+
+            if (box02_left <= xprediction && xprediction <= box02_right && box02_top <= yprediction && yprediction <= box02_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+            if (box03_left <= xprediction && xprediction <= box03_right && box03_top <= yprediction && yprediction <= box03_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+            if (box04_left <= xprediction && xprediction <= box04_right && box04_top <= yprediction && yprediction <= box04_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+            if (box05_left <= xprediction && xprediction <= box05_right && box05_top <= yprediction && yprediction <= box05_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+            if (box06_left <= xprediction && xprediction <= box06_right && box06_top <= yprediction && yprediction <= box06_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+            if (box07_left <= xprediction && xprediction <= box07_right && box07_top <= yprediction && yprediction <= box07_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+            if (box08_left <= xprediction && xprediction <= box08_right && box08_top <= yprediction && yprediction <= box08_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+            }
+
+
+        }).begin();
+
+    </script>
+
+
+
+
+
+    <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<style>
+    .word {
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <main>
+        <!-- ======= Pricing Section ======= -->
+        <section class="pricing">
+
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h3>채팅방 선택</h3>
+                </header>
+                <div class="row" data-aos="fade-left">
+
+                    <div class="col-lg-3 col-md-6" id="box01" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="box">
+
+                            <div class="word">~~~님과의<br> 채팅방</div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" id="box02" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="box">
+
+                            <div class="word">숨쉬기가<br> 채팅방</div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" id="box03" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="box">
+
+                            <div class="word">침을<br> 채팅방</div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" id="box04" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="box">
+
+                            <div class="word">침을<br> 채팅방</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row gy-4" data-aos="fade-left" style="margin-top: 3%;">
+
+                    <div class="col-lg-3 col-md-6" id="box05" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="box">
+
+                            <div class="word">가래를<br> 채팅방</div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" id="box06" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="box">
+                            <div class="word">숨쉬기가<br> 채팅방</div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" id="box07" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="box">
+
+                            <div class="word">침을<br> 채팅방</div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" id="box08" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="box">
+
+                            <div class="word">침을<br> 채팅방</div>
+                        </div>
+                    </div>
+
+                </div>
+
+        </section><!-- End Pricing Section -->
+
+
+
+        </div><!-- End #main -->
+
+    </main>
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../public/js/app.js"></script>
+
+
+
+    <!-- Vendor JS Files -->
+    <script type="text/babel" src="../public/assets/vendor/purecounter/purecounter.js"></script>
+    <script type="text/babel" src="../public/assets/vendor/aos/aos.js"></script>
+    <script type="text/babel" src="../public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/babel" src="../public/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script type="text/babel" src="../public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script type="text/babel" src="../public/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script type="text/babel" src="../public/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script type="text/babel" src="../public/assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>

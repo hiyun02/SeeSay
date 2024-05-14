@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>이미지 업로드 및 IPFS 등록</title>
+</head>
+<body>
+  <input type="file" id="imageInput">
+  <button id="uploadBtn">업로드</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.js"></script>
+  <script>
+    // IPFS 노드 생성
+    const ipfs = new IPFS();
+    // 버튼 클릭 이벤트 핸들러
+    document.getElementById('uploadBtn').addEventListener('click', function() {
+      // 파일 선택
+      const fileInput = document.getElementById('imageInput');
+      const file = fileInput.files[0];
+      // 파일을 읽기 위한 FileReader 객체 생성
+      const reader = new FileReader();
+      // 파일 읽기 완료 이벤트 핸들러
+      reader.onloadend = function() {
+        // 읽은 데이터를 IPFS에 등록
+        const buffer = Buffer.from(reader.result);
+        ipfs.add(buffer, (err, result) => {
+          if (err) {
+            console.error('IPFS 등록 오류:', err);
+          } else {
+            // 등록된 이미지의 해시 전달
+            displayResult(result[0].hash);
+            console.log('등록된 이미지의 IPFS 해시:', result[0].hash);
+          }
+        });
+      };
+      // 파일을 읽기
+      reader.readAsArrayBuffer(file);
+    });
+    function displayResult(result) {
+        $('#resultDiv').text(result);
+      };
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FlexStart Bootstrap Template - Index</title>
+
+
+
+  <!-- Favicons -->
+  <link type="text/css" href="../public/assets/img/favicon.png" rel="icon">
+  <link type="text/css" href="../public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link type="text/css"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link type="text/css" href="../public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" href="../public/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link type="text/css" href="../public/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link type="text/css" href="../public/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link type="text/css" href="../public/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="../public/js/webgazer.js"></script>
+
+  <script>
+    webgazer.setGazeListener(function (data, elapsedTime) {
+      if (data == null) {
+        return;
+      }
+      var xprediction = data.x; //these x coordinates are relative to the viewport
+      var yprediction = data.y; //these y coordinates are relative to the viewport
+      console.log(elapsedTime); //elapsed time is based on time since begin was called
+
+      var blink = String(data.eyeFeatures.left.blink);
+
+
+      const box01 = document.getElementById("box01");
+      let box01_top = parseInt(box01.getBoundingClientRect().top);
+      let box01_bottom = parseInt(box01.getBoundingClientRect().bottom);
+      let box01_left = parseInt(box01.getBoundingClientRect().left);
+      let box01_right = parseInt(box01.getBoundingClientRect().right);
+
+      const box02 = document.getElementById("box02");
+      let box02_top = parseInt(box02.getBoundingClientRect().top);
+      let box02_bottom = parseInt(box02.getBoundingClientRect().bottom);
+      let box02_left = parseInt(box02.getBoundingClientRect().left);
+      let box02_right = parseInt(box02.getBoundingClientRect().right);
+
+      const box03 = document.getElementById("box03");
+      let box03_top = parseInt(box03.getBoundingClientRect().top);
+      let box03_bottom = parseInt(box03.getBoundingClientRect().bottom);
+      let box03_left = parseInt(box03.getBoundingClientRect().left);
+      let box03_right = parseInt(box03.getBoundingClientRect().right);
+
+      const box04 = document.getElementById("box04");
+      let box04_top = parseInt(box04.getBoundingClientRect().top);
+      let box04_bottom = parseInt(box04.getBoundingClientRect().bottom);
+      let box04_left = parseInt(box04.getBoundingClientRect().left);
+      let box04_right = parseInt(box04.getBoundingClientRect().right);
+
+      const box05 = document.getElementById("box05");
+      let box05_top = parseInt(box05.getBoundingClientRect().top);
+      let box05_bottom = parseInt(box05.getBoundingClientRect().bottom);
+      let box05_left = parseInt(box05.getBoundingClientRect().left);
+      let box05_right = parseInt(box05.getBoundingClientRect().right);
+
+      const box06 = document.getElementById("box06");
+      let box06_top = parseInt(box06.getBoundingClientRect().top);
+      let box06_bottom = parseInt(box06.getBoundingClientRect().bottom);
+      let box06_left = parseInt(box06.getBoundingClientRect().left);
+      let box06_right = parseInt(box06.getBoundingClientRect().right);
+
+      const box07 = document.getElementById("box07");
+      let box07_top = parseInt(box07.getBoundingClientRect().top);
+      let box07_bottom = parseInt(box07.getBoundingClientRect().bottom);
+      let box07_left = parseInt(box07.getBoundingClientRect().left);
+      let box07_right = parseInt(box07.getBoundingClientRect().right);
+
+      const box08 = document.getElementById("box08");
+      let box08_top = parseInt(box08.getBoundingClientRect().top);
+      let box08_bottom = parseInt(box08.getBoundingClientRect().bottom);
+      let box08_left = parseInt(box08.getBoundingClientRect().left);
+      let box08_right = parseInt(box08.getBoundingClientRect().right);
+
+      const btnChat = document.getElementById("btn-chat");
+      let btnChat_top = parseInt(btnChat.getBoundingClientRect().top);
+      let btnChat_bottom = parseInt(btnChat.getBoundingClientRect().bottom);
+      let btnChat_left = parseInt(btnChat.getBoundingClientRect().left);
+      let btnChat_right = parseInt(btnChat.getBoundingClientRect().right);
+
+      const mute = document.getElementById("mute");
+      let mute_top = parseInt(mute.getBoundingClientRect().top);
+      let mute_bottom = parseInt(mute.getBoundingClientRect().bottom);
+      let mute_left = parseInt(mute.getBoundingClientRect().left);
+      let mute_right = parseInt(mute.getBoundingClientRect().right);
+
+      const camera = document.getElementById("camera");
+      let camera_top = parseInt(camera.getBoundingClientRect().top);
+      let camera_bottom = parseInt(camera.getBoundingClientRect().bottom);
+      let camera_left = parseInt(camera.getBoundingClientRect().left);
+      let camera_right = parseInt(camera.getBoundingClientRect().right);
+
+      if (box01_left <= xprediction && xprediction <= box01_right && box01_top <= syprediction && yprediction <= box01_bottom && blink == "true") {
+                console.log("박스 클릭!!!!!!!!!!");
+                box01.click();
+      }
+
+      if (box02_left <= xprediction && xprediction <= box02_right && box02_top <= yprediction && yprediction <= box02_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          box02.click();
+      }
+      if (box03_left <= xprediction && xprediction <= box03_right && box03_top <= yprediction && yprediction <= box03_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          box03.click();
+      }
+      if (box04_left <= xprediction && xprediction <= box04_right && box04_top <= yprediction && yprediction <= box04_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          box04.click();
+      }
+      if (box05_left <= xprediction && xprediction <= box05_right && box05_top <= yprediction && yprediction <= box05_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          box05.click();
+      }
+      if (box06_left <= xprediction && xprediction <= box06_right && box06_top <= yprediction && yprediction <= box06_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          box06.click();
+      }
+      if (box07_left <= xprediction && xprediction <= box07_right && box07_top <= yprediction && yprediction <= box07_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          box07.click();
+      }
+      if (box08_left <= xprediction && xprediction <= box08_right && box08_top <= yprediction && yprediction <= box08_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          box08.click();
+      }
+      if (btnChat_left <= xprediction && xprediction <=btnChat_right && btnChat_top <= yprediction && yprediction <= btnChat_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          btnChat.click();
+      }
+      if (mute_left <= xprediction && xprediction <= mute_right && mute_top <= yprediction && yprediction <= mute_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          mute.click();
+      }
+      if (camera_left <= xprediction && xprediction <= camera_right && camera_top <= yprediction && yprediction <= camera_bottom && blink == "true") {
+          console.log("박스 클릭!!!!!!!!!!");
+          camera.click();
+      }
+    
+    
+    }).begin();
+
+  </script>
+
+
+
+
+  <!-- Template Main CSS File -->
+  <link type="text/css" href="../public/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<style>
+  .word {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  video {
+    background-color: #ddd;
+    border-radius: 7px;
+
+    width: 400px;
+    height: 300px;
+  }
+
+  .chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+  }
+
+  .chat li.left .chat-body {
+    margin-left: 60px;
+  }
+
+  .chat li.right .chat-body {
+    margin-right: 60px;
+  }
+
+
+  .chat li .chat-body p {
+    margin: 0;
+    color: #777777;
+  }
+
+  .panel .slidedown .glyphicon,
+  .chat .glyphicon {
+    margin-right: 5px;
+  }
+
+  .panel-body {
+    overflow-y: scroll;
+    height: 250px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
+  }
+
+  button {
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 200px;
+    height: 50px;
+
+  }
+
+  .btn {
+    background-color: #007bff;
+    font-weight: bold;
+    color: white;
+  }
+</style>
+
+<body>
+  <main>
+
+
+    <div id="room">
+
+      <!-- ======= Pricing Section ======= -->
+      <section class="pricing">
+
+
+        <div class="container" data-aos="fade-up">
+
+          <header class="section-header">
+            <h3>Open Rooms</h3>
+          </header>
+
+          <div class="row" data-aos="fade-left">
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+              <div class="box" id="box01">
+
+                <div class="word" onclick="ttsWord(`사랑해요`)"><br>사랑해요<br></div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+              <div class="box" id="box02">
+
+                <div class="word" onclick="ttsWord(`고마워요`)"><br>고마워요<br></div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="box" id="box03">
+
+                <div class="word" onclick="ttsWord(`침을빼주세요`)">침을<br> 빼주세요</div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="box" id="box04">
+
+                <div class="word" onclick="ttsWord(`몸을 옆으로 돌려주세요`)">몸을<br> 옆으로돌려주세요</div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row gy-4" data-aos="fade-left" style="margin-top: 3%;">
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+              <div class="box" id="box05">
+
+                <div class="word" onclick="ttsWord(`귀가간지러워요`)">귀가<br> 간지러워요</div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+              <div class="box" id="box06">
+
+                <div class="word" onclick="ttsWord(`숨쉬기가 힘들어요`)">숨쉬기가<br> 힘들어요</div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="box" id="box07">
+
+                <div class="word" onclick="ttsWord(`보고싶었어요`)"><br>보고싶었어요<br></div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="box" id="box08">
+
+                <div class="word" onclick="ttsWord(`밥 잘챙겨먹어요`)">밥<br>잘챙겨먹어요<br></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section><!-- End Pricing Section -->
+      <div class="row gy-3" style="margin: 0 auto;">
+
+
+        <div class="col-lg-3 col-md-6">
+          <video id="myFace" autoplay="autoplay" , playsinline,muted></video>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <video id="peerFace" autoplay="autoplay" , playsinline></video>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+
+          <div class="panel panel-primary">
+
+            <div class="panel-body" id="chatting">
+              <ul class="chat">
+                <li class="left clearfix">
+                  <div class="chat-body clearfix">
+                    <div class="header">
+                      <strong class="primary-font">Chatting</strong>
+                      <small class="pull-right text-muted">
+                        <span class="glyphicon glyphicon-time"></span></small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="panel-footer">
+              <div class="input-group" id="chatmsg">
+                <form id="msg">
+                  <input id="msginputvalue" type="text" class="form-control input-sm"
+                    placeholder="Type your message here..." style="width: 100%; " value="">
+                  <span class="input-group-btn">
+                    <button class="btn  btn-sm" id="btn-chat" style="width:500px ;height: 100px;">
+                      Send</button>
+                  </span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!---button-->
+      <div class="row gy-4" data-aos="fade-left">
+
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <button class="btn  btn-sm" id="mute" style="width:200px">
+            Mute</button>
+          <button class="btn  btn-sm" id="camera" style="width:200px">
+            camerOff</button>
+          <select aria-label="cameras" id="cameras"></select>
+        </div>
+
+
+      </div>
+
+
+
+
+    </div><!-- End #main -->
+
+  </main>
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="../public/js/app.js"></script>
+
+  <script>
+    function ttsWord(text) {
+      console.log("tts");
+      if (typeof SpeechSynthesisUtterance === "undefined" || typeof window.speechSynthesis === "undefined") {
+        alert("이 브라우저는 음성 합성을 지원하지 않습니다.")
+        return
+      }
+
+      window.speechSynthesis.cancel() // 현재 읽고있다면 초기화
+
+      sendMessage(text)
+      const speechMsg = new SpeechSynthesisUtterance()
+      speechMsg.rate = 1 || 1 // 속도: 0.1 ~ 10
+      speechMsg.pitch = 1.2 || 1 // 음높이: 0 ~ 2
+      speechMsg.lang = "ko-KR";
+      speechMsg.text = text
+
+      // SpeechSynthesisUtterance에 저장된 내용을 바탕으로 음성합성 실행
+      window.speechSynthesis.speak(speechMsg)
+    }
+
+    function sendMessage(text) {
+      console.log(text);
+      const textMsgBox = document.getElementById("msginputvalue");
+      textMsgBox.value = text;
+
+
+    }
+
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script type="text/babel" src="../public/assets/vendor/purecounter/purecounter.js"></script>
+  <script type="text/babel" src="../public/assets/vendor/aos/aos.js"></script>
+  <script type="text/babel" src="../public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/babel" src="../public/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script type="text/babel" src="../public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script type="text/babel" src="../public/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script type="text/babel" src="../public/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script type="text/babel" src="../public/assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
